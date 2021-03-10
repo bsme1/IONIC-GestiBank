@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title align="center">
+      Espace administrateur
+    </ion-title>
+    <ion-chip [routerLink]="['/home']" slot="end">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card align="center">
+    <ion-row>
+      <img class="image-logo" src="assets/logo.png" alt="Logo de GestiBank" />
+    </ion-row>
+    <ion-card-title style="margin-top: 7%" style="margin-bottom: 7%">Mon espace administrateur</ion-card-title>
+    <ion-card-content>
+
+
+      <ion-button [routerLink]="['/liste-demandes']" shape="round" expand="block">Consulter les demandes</ion-button>
+      <ion-button [routerLink]="['/liste-agents']" shape="round" expand="block">Lister les agents</ion-button>
+      <ion-button shape="round" expand="block">Ajouter des agents</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

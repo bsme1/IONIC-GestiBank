@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title align="center">Création de compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-row>
+        <img class="image-logo" src="assets/logo.png" />
+      </ion-row>
+
+      <ion-card-title align="center" style="margin-top: 7%" style="margin-bottom: 7%">S'inscrire pour créer un compte</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-item>
+          <ion-label>
+            <ion-icon name="person-outline"></ion-icon> Nom
+          </ion-label>
+          <ion-input placeholder="" [(ngModel)]="nom" name="nom"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="person-outline"></ion-icon> Prénom
+          </ion-label>
+          <ion-input placeholder="" [(ngModel)]="prenom" name="prenom"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="mail-outline"></ion-icon> Email
+          </ion-label>
+          <ion-input placeholder="" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="call"></ion-icon> Tel
+          </ion-label>
+          <ion-input placeholder="" [(ngModel)]="tel" name="tel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+            <ion-icon name="key-outline"></ion-icon> Type de compte
+          </ion-label>
+          <ion-select [(ngModel)]="typedecompte" placeholder="Sélectionner">
+            <ion-select-option value="csd">Compte sans découvert</ion-select-option>
+            <ion-select-option value="cad">Compte avec découvert</ion-select-option>
+            <ion-select-option value="pe">Plan d'épargne</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-row class="row-btn">
+          <ion-button (click)="creationCompte()" class="ion-class-center" >Créer un compte</ion-button>
+        </ion-row>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
